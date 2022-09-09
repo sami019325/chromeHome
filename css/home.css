@@ -1,0 +1,133 @@
+body {
+    margin: 0 auto;
+    background: #FF9E9E;
+}
+
+
+/* ================================ navigation bar================================ */
+
+.navbarContainer {
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBox {
+    width: 407px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.36);
+    border-radius: 31px;
+}
+
+.grid5 {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    gap: 10px;
+}
+
+.lime {
+    background-color: lime;
+}
+
+.lightPurple {
+    background-color: #FFBCA6;
+}
+
+/* ------------------- colors ------------------ */
+.purple50 {
+    background: rgba(255, 188, 166, 0.5);
+}
+
+.purple50:hover {
+    background: rgba(255, 188, 166, 1);
+}
+
+.board {
+    background: #FFF5CC;
+}
+
+
+
+.main {
+    height: 80vh;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.box {
+    border-radius: 5px;
+    padding: 18px;
+}
+
+/* ============================== left  divs ========================== */
+.leftDivContainer {
+    display: grid;
+    grid-template-rows: 5fr 3fr;
+    gap: 10px;
+}
+
+
+/* ======================================= right divs ============================= */
+.rightDivContainer {
+    background: #EB8FA6;
+    border: 5px solid #FFF5CC;
+    border-radius: 18px;
+}
+
+.container_Of_This_Month {
+    width: 90%;
+    margin: auto;
+}
+
+/* ============================================ content box =============================== */
+.contentTitle {
+    height: 10%;
+    margin-top: 0px;
+    background: #FFE0AB;
+    /* padding: 10px; */
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentArea {
+    margin-top: -19px;
+    height: 90%;
+    /* font-size: x-large; */
+}
+
+.hr {
+    border: 3px solid #FFF5CC;
+    width: 90%;
+}
+
+.task {
+    width: 50%;
+    margin: 5px;
+    padding: 0px;
+    background: #FFE0AB;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+}
+
+.task_Text_area {
+    margin: 5px;
+    background: #FFE0AB;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    gap: 5px;
+}
+
+.done_btn {
+    background: #EB8FA6;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+}
