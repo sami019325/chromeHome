@@ -11,41 +11,91 @@
 </head>
 
 <body>
-    <nav class="navbarContainer">
-        <div class="navBox"></div>
-    </nav>
-    <main class="grid5 main">
-        <div class=" leftDivContainer">
-            <div class="lightPurple box"></div>
-            <div class="purple50 box"></div>
-        </div>
-        <div class="lightPurple">
-            <h1 class="contentTitle">What's today?</h1>
-            <h1 class="contentArea board flex">
-                <div class="box task">
-                    <div class="task_Text_area">
-                        <div class="lime">d</div>
-                        <div class="lime">d</div>
-                    </div>
-                    <div class="lime done_btn">Done</div>
+    <section id="body">
+        <nav class="navbarContainer">
+            <div class="navBox"></div>
+        </nav>
+        <main class="grid5 main">
+            <div class=" leftDivContainer">
+                <div class="lightPurple box"></div>
+                <div class="purple50 box flex-middle pointer" onclick="hideAndShow('body', 'adddd')">
+                    <img src="image/fi_plus-circle.png" alt="" srcset="">
                 </div>
-                <div>safdasdfsdasfsdfas</div>
-                <div>safdasdfsdasfsdfas</div>
-                <div>safdasdfsdasfsdfas</div>
-            </h1>
-        </div>
-        <div class="rightDivContainer">
-            <div class="flex container_Of_This_Month">
-                <h1>This month</h1>
-                <hr class="hr">
             </div>
-        </div>
+            <div class="lightPurple">
+                <h1 class="contentTitle">What's today?</h1>
+                <h1 class="contentArea board flex">
+                    <div class="box task">
+                        <div class="task_Text_area">
+                            <div class="image_contener"></div>
+                            <div class=" text_contener">
+                                <div>
+                                    <h3>finish the task</h3>
+                                </div>
+                                <div>
+                                    <p>sami sami msaoi ami sami msaoi ami sami msaoi</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lime done_btn flex-middle pointer">Done</div>
+                    </div>
+                    <div id="showText">safdasdfsdasfsdfas</div>
+
+                </h1>
+            </div>
+            <div class="rightDivContainer">
+                <div class="flex container_Of_This_Month">
+                    <h1>This month</h1>
+                    <hr class="hr">
+                </div>
+            </div>
+        </main>
+
+    </section>
+
+    <main class="add_Item_container" id="adddd">
+        <section class="add_item_div">
+            <div class="add_item">
+                <div class="input_field">
+                    <div class="flex ">
+                        <textarea class="board input_Header" placeholder="What’s the task?" maxlength="50" name=""
+                            id="titleText"></textarea>
+                        <textarea class="lightBoard input_Details" placeholder="Are any details ? " maxlength="100"
+                            name="" id="descriptionText"></textarea>
+                    </div>
+                    <div class="days_Input">
+                        <div class="boxOfInput">today</div>
+                        <div class="boxOfInput">Tomorrow</div>
+                        <div class="boxOfInput">today</div>
+                        <div class="boxOfInput">today</div>
+                        <div class="boxOfInput">today</div>
+                        <div class="boxOfInput">today</div>
+                        <div class="boxOfInput">today</div>
+                        <div class="boxOfInput">today</div>
+                        <div class="boxOfInput">today</div>
+                    </div>
+                    <div class="color_Input">
+                        <div class="boxOfInput">Red</div>
+                        <div class="boxOfInput">Green</div>
+                        <div class="boxOfInput">Blue</div>
+                    </div>
+
+                </div>
+                <div class="done white flex ">
+                </div>
+                <div class="done ok flex lightPurple" onclick="hideAndShow('adddd', 'body'); addTask()">
+                    <h1>Done</h1>
+                </div>
+            </div>
+            <div class="add_preView">v</div>
+        </section>
+
     </main>
 
 
-
-
     <script src="js/addItem.js"></script>
+    <script src="js/getAPI.js"></script>
 </body>
 
 </html>

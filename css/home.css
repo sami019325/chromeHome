@@ -3,6 +3,25 @@ body {
     background: #FF9E9E;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
 /* ================================ navigation bar================================ */
 
@@ -35,6 +54,14 @@ body {
     background-color: #FFBCA6;
 }
 
+.white {
+    background: #f1f1f1;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
 /* ------------------- colors ------------------ */
 .purple50 {
     background: rgba(255, 188, 166, 0.5);
@@ -45,6 +72,10 @@ body {
 }
 
 .board {
+    background: #FFF5CC;
+}
+
+.lightBoard {
     background: #FFF5CC;
 }
 
@@ -97,6 +128,13 @@ body {
     align-items: center;
 }
 
+.flex-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .contentArea {
     margin-top: -19px;
     height: 90%;
@@ -126,8 +164,136 @@ body {
     gap: 5px;
 }
 
+.text_contener {
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: 400;
+    /*  display: grid;
+    grid-template-rows: 1fr 2fr; */
+}
+
 .done_btn {
     background: #EB8FA6;
     border-radius: 0px 0px 15px 15px;
-    text-align: center;
+}
+
+.done_btn:hover {
+    background: #f76c8f;
+
+}
+
+
+
+
+
+/* ================================================================================ */
+/* --------------------------------------------- add items ----------------------- */
+/* ==================================================================================== */
+
+.add_Item_container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #FF9E9E;
+    padding: 50px;
+    display: none;
+}
+
+.add_item_div {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    gap: 50px;
+    cursor: none;
+}
+
+.add_item {
+    background: #EB8FA6;
+    border: 5px solid #FFF5CC;
+    border-radius: 18px;
+    padding: 10px;
+}
+
+
+/* ======================================= input filed ================================= */
+.input_field {
+    display: grid;
+    grid-template-columns: 4fr 4fr 2fr;
+}
+
+.add_preView {
+    border: 5px solid #FFF5CC;
+    border-radius: 18px;
+}
+
+.input_Header {
+    width: 90%;
+    height: 50px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    padding: 10px;
+    margin: 2px;
+    border: 2px solid #FFF5CC;
+}
+
+.input_Header:hover {
+    border: 2px solid purple;
+
+}
+
+
+.input_Details {
+    width: 90%;
+    height: 200px;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 10px;
+    border: 2px solid #FFF5CC;
+}
+
+.input_Details:hover {
+    border: 2px solid purple;
+}
+
+.boxOfInput {
+    height: 80px;
+    width: 130px;
+    background: #FFBCA6;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    font-weight: 900;
+    font-size: 1.5rem;
+    border: 2px solid #FFBCA6;
+}
+
+.boxOfInput:hover {
+    background: #fa9d7d;
+    cursor: none;
+    border: 2px solid #b64019;
+    color: aliceblue;
+}
+
+.days_Input {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.color_Input {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.done {
+    margin-top: 20px;
+    height: 70px;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.ok:hover {
+    background-color: limegreen;
 }
