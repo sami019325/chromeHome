@@ -93,6 +93,8 @@ body {
     padding: 18px;
 }
 
+
+
 /* ============================== left  divs ========================== */
 .leftDivContainer {
     display: grid;
@@ -137,7 +139,8 @@ body {
 
 .contentArea {
     margin-top: -19px;
-    height: 90%;
+    height: 400px;
+    overflow-y: scroll;
     /* font-size: x-large; */
 }
 
@@ -147,9 +150,10 @@ body {
 }
 
 .task {
-    width: 50%;
+    width: 400px;
     margin: 5px;
     padding: 0px;
+    border-radius: 18px;
     background: #FFE0AB;
     display: grid;
     grid-template-columns: 1fr;
@@ -166,7 +170,6 @@ body {
 
 .text_contener {
     font-size: 20px;
-    line-height: 18px;
     font-weight: 400;
     /*  display: grid;
     grid-template-rows: 1fr 2fr; */
@@ -197,14 +200,14 @@ body {
     left: 0;
     right: 0;
     background-color: #FF9E9E;
-    padding: 50px;
+    padding: 10px;
     display: none;
 }
 
 .add_item_div {
     display: grid;
-    grid-template-columns: 5fr 2fr;
-    gap: 50px;
+    grid-template-columns: 7fr 2fr;
+    gap: 20px;
     cursor: none;
 }
 
@@ -296,4 +299,38 @@ body {
 
 .ok:hover {
     background-color: limegreen;
+}
+
+
+
+/* ------------------------------ image box container -------------------------- */
+
+.img_box_container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.img_box {
+    background-color: #000;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+.img_box:hover {
+    background-color: rgb(70, 3, 3);
+}
+
+.img_box img {
+    width: 95%;
+}
+
+.Task_img {
+    border-radius: 10px;
+    /* display: flex; */
+}
+
+.Task_img img {
+    width: 95%;
 }
