@@ -39,6 +39,31 @@ const setBorderDate = (border) => {
     }
     document.getElementById(border).style.border = '2px solid tomato';
 }
+const changeColor = (color) => {
+    console.log(color)
+
+    let dateText = 'colorSet'
+    // for (let i = 1; i < 4; i++) {
+    //     let bgcolors = dateText + i
+    //     console.log(bgcolors)
+    //     document.getElementById(bgcolors).style.background = '#FFBCA6'
+    // }
+    if (color === 'red') {
+        document.getElementById('green').style.background = '#FFBCA6';
+        document.getElementById('blue').style.background = '#FFBCA6';
+        document.getElementById(color).style.background = color;
+    }
+    else if (color === 'green') {
+        document.getElementById('red').style.background = '#FFBCA6';
+        document.getElementById('blue').style.background = '#FFBCA6';
+        document.getElementById(color).style.background = color;
+    }
+    else {
+        document.getElementById('red').style.background = '#FFBCA6';
+        document.getElementById('green').style.background = '#FFBCA6';
+        document.getElementById(color).style.background = color;
+    }
+}
 let htmlFiles = [];
 
 const values = localStorage.getItem('value')
@@ -51,12 +76,15 @@ const setHTMLFiles = () => {
     // console.log('htmlFiles')
 }
 if (valuesParsed?.length > 0) { setHTMLFiles(); }
-
+let id;
 const addTask = () => {
+    id = Math.floor((Math.random() * 1000000) + 1);
+    console.log(id)
+    divId = id
     const text = document.getElementById('titleText').value;
     const textdesc = document.getElementById('descriptionText').value;
     const image = imgURL
-    const data = { text, textdesc, image }
+    const data = { divId, text, textdesc, image }
     // console.log(data)
 
     htmlFiles.push(data)
@@ -65,11 +93,38 @@ const addTask = () => {
     displayData()
 }
 
+
+// delete items 
+
+
+const deletItem = (id) => {
+    console.log('idddd', id)
+    // window.confirm("Are sure you want to delete?");
+
+    if (confirm("Are sure you want to delete?")) {
+        const innervalues = localStorage.getItem('value')
+        const innervaluesParsed = JSON.parse(innervalues)
+        const newData = innervaluesParsed.filter(v => v.divId !== id)
+        console.log(newData)
+
+        htmlFiles = newData
+        const htmlFilesStringy = JSON.stringify(htmlFiles)
+        localStorage.setItem('value', htmlFilesStringy)
+        displayData()
+    }
+    else {
+        return;
+    }
+}
+
 const displayData = () => {
     const values = localStorage.getItem('value')
     const valuesParsed = JSON.parse(values)
     const taskContainer = document.getElementById('Task_Box')
     taskContainer.innerHTML = '';
+
+
+
 
     console.log('============================== ========================== ================= ', valuesParsed)
     valuesParsed.forEach(value => {
@@ -77,7 +132,7 @@ const displayData = () => {
         //  console.log('------------------------------- ------------------------- --------------- ', value)
         taskDiv = document.createElement('div')
         const gottenValue = `
-         <div class="box task">
+         <div class="box task" id='${value.divId}'>
          <div class="task_Text_area">
              <div class="image_contener Task_img flex">
                  <img src="${value.image}" alt="${value.image}">
@@ -92,7 +147,7 @@ const displayData = () => {
                  </div>
              </div>
          </div>
-         <div class="lime done_btn flex-middle pointer">Done</div>
+         <div class="lime done_btn flex-middle pointer" onclick="deletItem(${value.divId})">Done</div>
      </div>`
         taskDiv.innerHTML = gottenValue;
         taskContainer.appendChild(taskDiv)
@@ -100,3 +155,5 @@ const displayData = () => {
 
 }
 displayData()
+
+
