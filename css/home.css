@@ -369,3 +369,38 @@ body {
 .Task_img img {
     width: 95%;
 }
+
+/* -------------------------------- mobile device alert */
+.alert {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .alert {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        background-color: #fa9d7d;
+    }
+
+    #body {
+        display: none;
+    }
+
+    .alertHeading {
+        font-size: 42px;
+        background: -webkit-linear-gradient(rgb(56, 131, 49), rgb(42, 27, 27));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .textLarge {
+        font-size: 72px;
+        font: bolder;
+    }
+}

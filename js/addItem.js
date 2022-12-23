@@ -1,6 +1,6 @@
 console.log('working')
 
-let bgColor = '#FFE0AB'
+let bgColor = 'FFE0AB'
 const hideAndShow = (id, id2) => {
     document.getElementById(id).style.display = 'none';
     document.getElementById(id2).style.display = 'block';
