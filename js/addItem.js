@@ -117,6 +117,7 @@ const deletItem = (id) => {
     }
 }
 
+
 const displayData = () => {
     const values = localStorage.getItem('value')
     const valuesParsed = JSON.parse(values)
@@ -155,5 +156,4 @@ const displayData = () => {
 
 }
 displayData()
-
 
