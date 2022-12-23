@@ -1,6 +1,6 @@
 console.log('working')
 
-
+let bgColor = '#FFE0AB'
 const hideAndShow = (id, id2) => {
     document.getElementById(id).style.display = 'none';
     document.getElementById(id2).style.display = 'block';
@@ -48,20 +48,27 @@ const changeColor = (color) => {
     //     console.log(bgcolors)
     //     document.getElementById(bgcolors).style.background = '#FFBCA6'
     // }
-    if (color === 'red') {
-        document.getElementById('green').style.background = '#FFBCA6';
-        document.getElementById('blue').style.background = '#FFBCA6';
-        document.getElementById(color).style.background = color;
+    if (color === '#FFE0AB') {
+        document.getElementById('B1D8B7').style.background = '#FFBCA6';
+        document.getElementById('blueBG').style.background = '#FFBCA6';
+        document.getElementById('FFE0AB').style.background = '#FFE0AB';
+        bgColor = 'FFE0AB'
+        console.log(bgColor);
+
     }
-    else if (color === 'green') {
-        document.getElementById('red').style.background = '#FFBCA6';
-        document.getElementById('blue').style.background = '#FFBCA6';
-        document.getElementById(color).style.background = color;
+    else if (color === '#B1D8B7') {
+        document.getElementById('FFE0AB').style.background = '#FFBCA6';
+        document.getElementById('blueBG').style.background = '#FFBCA6';
+        document.getElementById('B1D8B7').style.background = '#B1D8B7';
+        bgColor = 'B1D8B7'
+        console.log(bgColor)
     }
     else {
-        document.getElementById('red').style.background = '#FFBCA6';
-        document.getElementById('green').style.background = '#FFBCA6';
-        document.getElementById(color).style.background = color;
+        document.getElementById('FFE0AB').style.background = '#FFBCA6';
+        document.getElementById('B1D8B7').style.background = '#FFBCA6';
+        document.getElementById('blueBG').style.background = '#8A8AFF';
+        bgColor = 'blueBG'
+        console.log(bgColor)
     }
 }
 let htmlFiles = [];
@@ -84,7 +91,7 @@ const addTask = () => {
     const text = document.getElementById('titleText').value;
     const textdesc = document.getElementById('descriptionText').value;
     const image = imgURL
-    const data = { divId, text, textdesc, image }
+    const data = { divId, text, textdesc, image, bgColor }
     // console.log(data)
 
     htmlFiles.push(data)
@@ -133,8 +140,8 @@ const displayData = () => {
         //  console.log('------------------------------- ------------------------- --------------- ', value)
         taskDiv = document.createElement('div')
         const gottenValue = `
-         <div class="box task" id='${value.divId}'>
-         <div class="task_Text_area">
+         <div class="box task ${value.bgColor}" id='${value.divId}'>
+         <div class="task_Text_area ${value.bgColor}">
              <div class="image_contener Task_img flex">
                  <img src="${value.image}" alt="${value.image}">
              </div>

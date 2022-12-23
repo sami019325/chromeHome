@@ -154,7 +154,7 @@ body {
     margin: 5px;
     padding: 0px;
     border-radius: 18px;
-    background: #FFE0AB;
+    /* background: #FFE0AB; */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 3fr 1fr;
@@ -162,10 +162,22 @@ body {
 
 .task_Text_area {
     margin: 5px;
-    background: #FFE0AB;
+    /* background: #FFE0AB; */
     display: grid;
     grid-template-columns: 2fr 4fr;
     gap: 5px;
+}
+
+.FFE0AB {
+    background: #FFE0AB;
+}
+
+.B1D8B7 {
+    background: #B1D8B7;
+}
+
+.blueBG {
+    background: #8A8AFF;
 }
 
 .text_contener {
