@@ -259,6 +259,9 @@ body {
 .add_preView {
     border: 5px solid #FFF5CC;
     border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .input_Header {
