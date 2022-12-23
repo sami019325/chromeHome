@@ -79,7 +79,16 @@ display_c5()
 
 // 86281ef773d25b350c381003e540e16f
 
-
+let temper;
 fetch('https://api.openweathermap.org/data/2.5/weather?q=dhaka&appid=7ca7349094e983c7a3fc3899d3571a14&units=metric')
-    .then(res => res.json)
-    .then(data => console.log('API data', data))
+    .then(res => res.json())
+    .then(data => {
+        console.log('API data 1', data.main.temp);
+        temper = data.main.temp;
+        document.getElementById('displayWeather').innerHTML = "° " + Math.round(temper)
+        return temper
+    })
+
+if (temper) {
+    console.log('API data', temper)
+}
